@@ -36,13 +36,17 @@ To get started with this repository, follow these steps:
     cd ..<directory name>
 3. Make sure you have .Net in your OS
     ```sh
-        dotnet --version
+    dotnet --version
 4. Build the project
      ```sh
-        dotnet build
+    dotnet build
 5. Run as a server
      ```sh
-        dotnet run server
+    dotnet run server
 6. Run as a client. You can have more than one clients. You can communicate with the server simultaneously
      ```sh
-        dotnet run client
+    dotnet run client
+
+## Details
+
+In this project, we have developed a concurrent client-server implementation for socket communication using F#. The project includes both server and client programs written in F# to facilitate communication via TCP/IP sockets. The server handles concurrent client requests, responding to arithmetic commands like addition, subtraction, and multiplication, followed by 2 to 4 input numbers. It performs error handling, returning appropriate error codes for incorrect commands. Graceful termination is ensured, allowing clients to exit individually with a "bye" command or terminate all connections with a "terminate" command. The program follows the specified input-output format and port number constraints. This assignment demonstrates effective socket programming and exception handling in F#.
