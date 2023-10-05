@@ -1,6 +1,6 @@
 # Client-Server Programming in F#
 
-![F# Logo](https://upload.wikimedia.org/wikipedia/en/3/3c/Fsharplogo.png)
+![F# Logo](https://upload.wikimedia.org/wikipedia/commons/6/66/F_Sharp_logo.svg)
 
 ## Overview
 
