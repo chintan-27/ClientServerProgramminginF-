@@ -58,9 +58,17 @@ module client =
                             writer.Flush()
                             let response = reader.ReadLine()
                             let reswords = response.Split ":"
-                            printfn "Server response: %s" response
+                            printfn "Server Response: %s" response
                             // Check if the server requested an exit
-                            if reswords.[0] = "Exit Code" && reswords.[1] = " -5" then
+                            if reswords.[0] = "Error Code" && reswords.[1] = " -1" then
+                                printfn "Incorrect operation command."
+                            else if reswords.[0] = "Error Code" && reswords.[1] = " -2" then
+                                printfn "Number of inputs in less than two"
+                            else if reswords.[0] = "Error Code" && reswords.[1] = " -3" then
+                                printfn "Number of inputs in more than four"
+                            else if reswords.[0] = "Error Code" && reswords.[1] = " -4" then
+                                printfn "One or more of the inputs contains non-numbers"
+                            else if reswords.[0] = "Exit Code" && reswords.[1] = " -5" then
                                 printfn "Exiting smoothly!"
                                 cancellationTokenSource.Cancel()
                     with
